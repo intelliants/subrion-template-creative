@@ -1,0 +1,251 @@
+@theme-primary: #F05F40;
+@theme-dark: #222;
+
+.service-box {
+    max-width: 400px;
+    margin: 50px auto 20px;
+    @media (min-width: 992px) {
+        margin: 20px auto 80px;
+    }
+    p {
+        margin-bottom: 0;
+    }
+    .text-muted{
+    	color: #777;
+    	font-size: 18px;
+    	line-height: 1.5;
+    	margin-bottom: 20px;
+
+    }
+
+}
+
+.text-primary {
+    color: @theme-primary;
+}
+.header-blocks{
+	padding-bottom: 80px;
+	h2.section-heading{
+		padding-top: 100px;
+		margin:0px 0 20px;
+	}
+	hr {
+	border-color: @theme-primary;
+	border-width: 3px;
+	max-width: 50px;
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+
+	hr.light {
+	    border-color: white;
+	}
+}
+
+/* New portfolio entries block */
+
+.no-gutter > [class*='col-']  {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.portfolio-entries .ia-item__image{
+	position: relative;
+	margin: 0px;
+
+	> img {
+		width: 100%;
+	}
+}
+
+.portfolio__overlaytittle{
+	position: absolute;
+	display: none;
+	z-index: 5;
+	font-size: 16px;
+	color: #fFF;
+    width: 100%;
+    text-align: center;
+    top: 45%;
+    left: 0px;
+    transform: translateY(-50%);
+    padding: 10px;
+
+}
+.portfolio__bg{
+	background-color: #222222;
+	margin: 0 -15px;
+	min-height: 200px;
+	padding-top: 20px;
+}
+.portfolio__overlaycateg{
+	display: none;
+	position: absolute;
+	z-index: 5;
+	font-size: 16px;
+	color: rgba(255, 255, 255, 0.7);
+	width: 100%;
+    text-align: center;
+ 	top: 55%;
+    left: 0px;
+    transform: translateY(-50%);
+}
+
+.portfolio .portfolio-entries .ia-item__image:after {
+	display: block;
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(240, 95, 64, 0.9);
+	z-index: 4;
+	opacity: 0;
+	-webkit-transition: opacity .14s ease-in-out;
+	     -o-transition: opacity .14s ease-in-out;
+	        transition: opacity .14s ease-in-out;
+}
+
+
+
+.portfolio-entries .ia-item__image:hover:after {
+	opacity: 1;
+}
+
+.portfolio-entries .ia-item__image:hover .fa {
+	opacity: 1;
+}
+.portfolio-entries .ia-item__image:hover{
+	.portfolio__overlaycateg{
+		display: block;
+	}
+	.portfolio__overlaytittle{
+		display: block;
+	}
+}
+
+.portfolio__addtext{
+	font-size: 30px;
+	color: #fff;
+	margin-right: 20px;
+	line-height: 80px;
+}
+
+/* Tags block */
+.ia-item__tags {
+	margin-top: 10px;
+}
+
+@media (min-width: 480px) {
+	.portfolio-entries .row + .row .ia-item--card .ia-item__image {
+		margin-top: 40px;
+	}
+}
+
+
+
+/* Portfolio entries list page */
+.page-portfolio .portfolio-entries .ia-item__title {
+	margin-bottom: 5px;
+}
+
+.page-portfolio .portfolio-entries .ia-item__image:after{
+	background: rgba(240, 95, 64, 0.9);
+	z-index: 4;
+	opacity: 0;
+	-webkit-transition: opacity .14s ease-in-out;
+	     -o-transition: opacity .14s ease-in-out;
+	        transition: opacity .14s ease-in-out;
+}
+
+/* View Portfolio entry page */
+.portfolio-entry > img {
+	width: 100%;
+}
+.content{
+		hr {
+	border-color: @theme-primary;
+	border-width: 3px;
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+	hr.light {
+	    border-color: white;
+	}
+}
+.footer{
+		hr {
+	border-color: @theme-primary;
+	border-width: 3px;
+	max-width: 50px;
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+
+	hr.light {
+	    border-color: white;
+	}
+	a{
+	    transition: all 0.35s;
+	    color: #f05f40;
+
+	}	
+	h2.section-heading{
+		padding-top: 60px;
+		margin:0px 0 20px;
+	}
+	p{
+	    font-size: 20px;
+	    line-height: 1.5;
+	    margin-bottom: 20px
+	}
+	&--colorbg{
+		background: #333333;
+	}
+	
+}
+@media (min-width: 768px) {
+	.navbar-shrink{
+		background: rgba(0, 0, 0, 0.6);
+
+	}
+	.navbar-default-inner{
+	background: #222;
+}
+}
+
+body.navbar--padtop{
+	padding-top: 62px;
+}		
+
+.footer--colorbg{
+	background: rgba(243, 232, 232, 0.7);
+	padding: 50px 0px
+}
+
+.service-box {
+  max-width: 400px;
+  margin: 50px auto 0;
+}
+@media (min-width: 992px) {
+  .service-box {
+    margin: 20px auto 0;
+  }
+}
+.service-box p {
+  margin-bottom: 0;
+}
+.text-primary {
+  color: #F05F40;
+}
+hr {
+  border-color: #F05F40;
+  border-width: 3px;
+  max-width: 50px;
+}
+hr.light {
+  border-color: white;
+}

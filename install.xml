@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template name="creative">
+	<title>Creative</title>
+	<summary>Bootstrap 3 developer template</summary>
+	<author>Egor Merkushev<</author>
+	<contributor>Intelliants LLC</contributor>
+	<version>1.0.0</version>
+	<date>2016-04-06</date>
+	<compatibility>4.0</compatibility>
+
+	<layout>
+		<position menu="1" movable="0">account</position>
+		<position menu="1" movable="0">mainmenu</position>
+
+		<position>inventory</position>
+		<position>teaser</position>
+		<position>verytop</position>
+		<position>services</position>
+		<position>portfolio</position>
+		<position>top</position>
+		<position>bottom</position>
+		<position>verybottom</position>
+		<position>footer</position>
+		<position>right</position>
+
+
+		<section name="header-blocks">
+			<position width="3">header1</position>
+			<position width="3">header2</position>
+			<position width="3">header3</position>
+			<position width="3">header4</position>
+		</section>
+		<section name="content">
+			<position fixed="1">left</position>
+			<position width="9">center</position>
+		</section>
+		<section name="footer-blocks">
+			<position width="3">footer1</position>
+			<position width="3">footer2</position>
+			<position width="3">footer3</position>
+			<position width="3">footer4</position>
+		</section>
+	</layout>
+
+	<configgroup name="template_creative">Template</configgroup>
+
+	<config group="template_creative" 
+		    type="divider"
+		    order="3000">General</config>
+
+	<config group="template_creative" 
+		    name="max_top_menu_items" 
+		    type="text" 
+		    description="Max number of items in Main Menu"
+		    order="3002">6</config>
+
+	<config group="template_creative"
+		    name="enable_landing" 
+		    type="radio"
+		    order="3003" 
+		    values="1,0" 
+		    description="Enable landing page">0</config>
+
+	<config group="template_creative" 
+		    name="website_bg" 
+		    type="image" 
+		    description="Header background"
+		    order="3004"><![CDATA[]]></config>
+
+	<config group="template_creative"
+		    name="enable_text_logo" 
+		    type="radio"
+		    order="3005" 
+		    values="1,0" 
+		    description="Enable Logo text">1</config>
+	<config group="template_creative"
+			name="logo_text"
+		    type="text" 
+		    order="3006" 
+		    show="enable_text_logo|1" 
+		    description="Logo text">START BOOTSTRAP</config>
+
+	<config group="template_creative" 
+		    type="divider"
+		    order="3030">Social links</config>
+	
+	<config group="template_creative"
+			name="website_social"
+		    type="radio" 
+		    order="3031"
+		    values="1,0" 
+		    description="Show links">1</config>
+	<config group="template_creative"
+			name="website_social_t"
+		    type="text"
+		    order="3032"
+		    show="website_social|1" 
+		    description="Twitter Link">https://twitter.com/IntelliantsLLC</config>
+	<config group="template_creative"
+			name="website_social_f"
+		    type="text" 
+		    order="3033" 
+		    show="website_social|1" 
+		    description="Facebook Link">https://www.facebook.com/Intelliants</config>
+	<config group="template_creative"
+			name="website_social_g"
+		    type="text" 
+		    order="3034" 
+		    show="website_social|1" 
+		    description="Google+ Link">https://plus.google.com/102500660503219569194/posts</config>
+	<config group="template_creative"
+			name="website_social_i"
+		    type="text" 
+		    order="3035" 
+		    show="website_social|1" 
+		    description="LinkedIn Link">#</config>
+
+	<config group="template_creative" 
+		    name="ckeditor_css" 
+		    type="hidden" 
+		    description="CKEditor CSS"
+		    order="3099">ckeditor.css</config>
+
+	<changeset>
+		<menu position="account" status="active">account</menu>
+
+		<block status="active" classname="box--border">common_statistics</block>
+		<block status="active" classname="box--border">filters</block>
+		<block status="active" classname="portfolio" position="portfolio" header="0">new_portfolio_entries</block>
+	</changeset>
+
+	<blocks>
+		<block name="header" 
+			   title="Teaser block" 
+			   position="teaser" 
+			   header="0"
+			   collapsible="0" 
+			   sticky="0" 
+			   pages="index"
+			   status="active"
+			   type="smarty">
+			<![CDATA[
+<div class="teaser">
+	<h1>YOUR FAVORITE SOURCE OF <br>FREE BOOTSTRAP THEMES</h1>
+	<hr>
+	<h2>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</h2>
+	<a href="#" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+</div>
+			]]>
+		</block>
+		
+		<block name="verytop" 
+			   title="Call to action" 
+			   position="verytop" 
+			   header="0"
+			   collapsible="0" 
+			   sticky="0" 
+			   pages="index"
+			   status="active"
+			   type="html">
+			<![CDATA[
+<div class="row">
+	<div class="col-lg-8 col-lg-offset-2 text-center">
+		<h2 class="section-heading">We've got what you need!</h2>
+		<hr>
+		<p class="text-faded">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
+		<a href="#" class="page-scroll btn btn-default btn-xl">Get Started!</a>
+	</div>
+</div>
+			]]>
+		</block>
+		<block name="services" 
+			   title="At your service" 
+			   position="services" 
+			   header="0"
+			   collapsible="0" 
+			   sticky="0" 
+			   pages="index"
+			   status="active"
+			   type="html">
+			<![CDATA[
+<div class="text-center">
+	<h2 class="section-heading">At your service!</h2>
+	<hr/>
+</div>
+			]]>
+		</block>
+		<block name="header1" 
+			   title="About CMS" 
+			   position="header1" 
+			   header="0"
+			   collapsible="0" 
+			   sticky="0" 
+			   status="active"
+			   type="html"
+			   pages="index">
+			<![CDATA[
+ <div class="service-box text-center">
+	<i class="fa fa-4x fa-diamond wow bounceIn text-primary"></i>
+	<h3>Sturdy Templates</h3>
+	<p class="text-muted">Our templates are updated regularly so they don't break.</p>
+</div>
+			]]>
+		</block>
+		<block name="header2" 
+			   title="For users" 
+			   position="header2" 
+			   header="0"
+			   collapsible="0" 
+			   sticky="0" 
+			   status="active"
+			   type="html"
+			   pages="index">
+			<![CDATA[
+<div class="service-box text-center">
+	<i class="fa fa-4x fa-paper-plane wow bounceIn text-primary" data-wow-delay=".1s"></i>
+	<h3>Ready to Ship</h3>
+	<p class="text-muted">You can use this theme as is, or you can make changes!</p>
+</div>
+			]]>
+		</block>
+		<block name="header3" 
+			   title="For developers" 
+			   position="header3" 
+			   header="0"
+			   collapsible="0" 
+			   sticky="0" 
+			   status="active"
+			   type="html"
+			   pages="index">
+			<![CDATA[
+<div class="service-box text-center">
+	<i class="fa fa-4x fa-newspaper-o wow bounceIn text-primary" data-wow-delay=".2s"></i>
+	<h3>Up to Date</h3>
+	<p class="text-muted">We update dependencies to keep things fresh.</p>
+</div>
+			]]>
+		</block>
+		<block name="header4" 
+			   title="For designers" 
+			   position="header4" 
+			   header="0"
+			   collapsible="0" 
+			   sticky="0" 
+			   status="active"
+			   type="html"
+			   pages="index">
+			<![CDATA[
+<div class="service-box text-center">
+	<i class="fa fa-4x fa-heart wow bounceIn text-primary" data-wow-delay=".3s"></i>
+	<h3>Made with Love</h3>
+	<p class="text-muted">You have to make your websites with love these days!</p>
+</div>
+			]]>
+		</block>
+		<block name="left_col" 
+			   title="Let's Get In Touch!" 
+			   position="left" 
+			   header="1"
+			   collapsible="0" 
+			   sticky="1" 
+			   status="active"
+			   type="html">
+			<![CDATA[
+<p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+<div class="text-center"><a href="#" class="btn btn-primary btn-xl page-scroll">Find Out More</a></div>
+			]]>
+		</block>
+		<block name="footer1" 
+			   title="About CMS" 
+			   position="footer1" 
+			   header="1"
+			   collapsible="0" 
+			   sticky="1" 
+			   status="active"
+			   type="html">
+			<![CDATA[
+<p>Subrion is a free open source content management system
+that allows you to build websites for any purpose. Yes, from blog to corporate mega portal.</p>
+
+			]]>
+		</block>
+		<block name="footer2" 
+			   title="For users" 
+			   position="footer2" 
+			   header="1"
+			   collapsible="0" 
+			   sticky="1" 
+			   status="active"
+			   type="html">
+			<![CDATA[
+<p>It's done to focus on the content management process. Start it hassle-free within just a few minutes and take care of the content. It's easy!</p>
+			]]>
+		</block>
+		<block name="footer3" 
+			   title="For developers" 
+			   position="footer3" 
+			   header="1"
+			   collapsible="0" 
+			   sticky="1" 
+			   status="active"
+			   type="html">
+			<![CDATA[
+<p>Forget the hours of programming simple things. Use Subrion framework API to add extra stuff using hooks, plugins, & packages.</p>
+			]]>
+		</block>
+		<block name="footer4" 
+			   title="For designers" 
+			   position="footer4" 
+			   header="1"
+			   collapsible="0" 
+			   sticky="1" 
+			   status="active"
+			   type="html">
+			<![CDATA[
+<p>Simple templating engine and styles allows you to create any template you wish with just a few lines of code.</p>
+			]]>
+		</block>
+		<block name="footer" 
+			   title="footer" 
+			   position="footer" 
+			   header="0"
+			   collapsible="0" 
+			   sticky="0" 
+			   pages="index"
+			   status="active"
+			   type="html">
+			<![CDATA[
+<div class="row">
+	<div class="col-lg-8 col-lg-offset-2 text-center">
+		<h2 class="section-heading">Let's Get In Touch!</h2>
+		<hr class="primary">
+		<p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+	</div>
+	<div class="col-lg-4 col-lg-offset-2 text-center">
+		<i class="fa fa-phone fa-3x wow bounceIn"></i>
+		<p>123-456-6789</p>
+	</div>
+	<div class="col-lg-4 text-center">
+		<i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+		<p><a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a></p>
+    </div>
+</div>
+			]]>
+		</block>
+
+	</blocks>
+
+	<phrases>
+		<phrase category="frontend" key="login">Log in</phrase>
+		<phrase category="frontend" key="register">Sign up</phrase>
+		<phrase category="frontend" key="back_to_top">Back to top</phrase>
+		<phrase category="frontend" key="share_your_love">Share your love</phrase>
+		<phrase category="frontend" key="portfolio_addtext">Share your love
+		<![CDATA[
+		<span class="portfolio__addtext">
+			See more works!
+			<br>
+		</span>
+			]]>
+		</phrase>
+		
+	</phrases>
+</template>
