@@ -2,7 +2,7 @@
 <template name="creative">
 	<title>Creative</title>
 	<summary>Bootstrap 3 developer template</summary>
-	<author>Egor Merkushev<</author>
+	<author>Egor Merkushev</author>
 	<contributor>Intelliants LLC</contributor>
 	<version>1.0.0</version>
 	<date>2016-04-06</date>
