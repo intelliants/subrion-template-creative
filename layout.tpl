@@ -170,7 +170,12 @@
 
 		<div class="footer footer--colorbg">
 			<div class="container text-center">
-				{lang key='powered_by_subrion'}
+				<div class="pull-left">
+					{ia_blocks block='copyright'}
+				</div>
+				<div class="pull-right">
+					{lang key='powered_by_subrion'}
+				</div>
 			</div>
 		</div>
 

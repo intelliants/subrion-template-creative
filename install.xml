@@ -5,7 +5,7 @@
 	<author>Egor Merkushev</author>
 	<contributor>Intelliants LLC</contributor>
 	<version>1.0.0</version>
-	<date>2016-04-06</date>
+	<date>2016-04-13</date>
 	<compatibility>4.0</compatibility>
 
 	<layout>
@@ -21,6 +21,7 @@
 		<position>bottom</position>
 		<position>verybottom</position>
 		<position>footer</position>
+		<position>copyright</position>
 		<position>right</position>
 
 
