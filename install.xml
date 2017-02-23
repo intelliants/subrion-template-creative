@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<template name="creative">
+<module type="template" name="creative">
 	<title>Creative</title>
 	<summary>Bootstrap 3 developer template</summary>
 	<author>Egor Merkushev</author>
 	<contributor>Intelliants LLC</contributor>
-	<version>1.0.0</version>
-	<date>2016-04-13</date>
-	<compatibility>4.0</compatibility>
+	<version>1.1.0</version>
+	<date>2017-02-23</date>
+	<compatibility>4.1</compatibility>
 
 	<layout>
 		<position menu="1" movable="0">account</position>
@@ -53,31 +53,24 @@
 		    name="max_top_menu_items" 
 		    type="text" 
 		    description="Max number of items in Main Menu"
-		    order="3002">6</config>
-
-	<config group="template_creative"
-		    name="enable_landing" 
-		    type="radio"
-		    order="3003" 
-		    values="1,0" 
-		    description="Enable landing page">0</config>
+		    order="3001">6</config>
 
 	<config group="template_creative" 
 		    name="website_bg" 
 		    type="image" 
 		    description="Header background"
-		    order="3004"><![CDATA[]]></config>
+		    order="3002"><![CDATA[]]></config>
 
 	<config group="template_creative"
 		    name="enable_text_logo" 
 		    type="radio"
-		    order="3005" 
+		    order="3003"
 		    values="1,0" 
 		    description="Enable Logo text">1</config>
 	<config group="template_creative"
 			name="logo_text"
 		    type="text" 
-		    order="3006" 
+		    order="3004"
 		    show="enable_text_logo|1" 
 		    description="Logo text">START BOOTSTRAP</config>
 
@@ -362,4 +355,4 @@ that allows you to build websites for any purpose. Yes, from blog to corporate m
 		</phrase>
 		
 	</phrases>
-</template>
+</module>
